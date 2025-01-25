@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Parkinsans:wght@300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+.nav-item {
+    justify-content: space-between;
+    padding-top: 10px;
+    transition: 0.1s ease;
+}
+.nav-item:hover {
+    transform: scale(1.09);
+    color: #fff;
+}
+.nav-link {
+    color: #484848;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "roboto condensed", sans-serif;
+}
+.center-links {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(50%);
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    font-size: 1rem;
+    color: #ccc;
+    background: #1e1e2f;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    font-family: "roboto condensed", sans-serif;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 210%;
+    height: 100%;
+    background: linear-gradient(120deg, #00c6ff, #0072ff, #00c6ff);
+    transition: all 0.6s ease;
+    z-index: -1;
+    transform: skewX(-20deg);
+}
+.btn:hover::before {
+    left: 0;
+    transform: skewX(0deg);
+}
+.btn:hover {
+    color: #fff;
+    box-shadow: 0 0 15px #00c6ff, 0 0 30px #0072ff;
+}
+.btn-secondary {
+    background: #2b2b40;
+    color: #ccc;
+}
+
+.btn-secondary::before {
+    background: linear-gradient(120deg, #8a2be2, #4b0082, #8a2be2);
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    box-shadow: 0 0 15px #8a2be2, 0 0 30px #4b0082;
+}
+.status-icon {
+    width: 19px;
+    padding-left: 9px;
+}
+.text-white {
+    font-size: 16px;
+    padding-top: 1.5px;
+}
+.nav-item-status {
+    margin-top: 22.5px;
+    background: #131621;
+    border-radius: 50px;
+    height: 30px;
+    width: 130px;
+    transition: 0.1s ease;
+}
+.nav-item-status:hover {
+    transform: scale(1.05);
+}
+.futuristic-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 1rem;
+    color: #ccc;
+    background: #1e1e2f;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 0;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+.futuristic-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 210%;
+    height: 100%;
+    background: linear-gradient(120deg, #5865F2, #4e5fd4, #5865F2);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: skewX(-20deg);
+}
+
+.futuristic-btn:hover::before {
+    left: 0;
+    transform: skewX(0deg);
+}
+
+.futuristic-btn:hover {
+    color: #5865F2;
+    box-shadow: 0 0 15px #5865F2, 0 0 30px #4e5fd4;
+}
+
+/* Discord-specific button */
+.discord-btn {
+    background: #5865F2;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.discord-btn::before {
+    background: linear-gradient(120deg, #7289da, #5865F2, #7289da);
+}
+
+.discord-btn:hover {
+    color: #fff;
+    box-shadow: 0 0 20px #7289da, 0 0 40px #5865F2;
+}
+.nav {
+    background: #263042;
+    list-style-type: none;
+    font-size: 18px;
+}
+nav.navbar-nav {
+    display: flex;
+    background: #263042;
+    justify-content: space-between;
+    padding: 0.5rem 5px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    transition: 0.3s ease-in;
+    color: #fff;
+}
+.logo {
+    width: 80px;
+    height: 70px;
+}
+.logo:hover {
+    transform: rotate(360deg);
+}
+.logo-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    padding-right: 10px;
+    transition: 0.4s ease;
+}
+.logo-link:hover {
+    transform: scale(1.02);
+}
+.main {
+    display: flex;
+    height: 80vh;
+    position: relative;
+}
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/Hero-image.jpeg) no-repeat center center/cover;
+    filter: brightness(0.3);
+    z-index: -1;
+}
+.main-text {
+    position: relative;
+    z-index: 1;
+}
+.main-text {
+    color: #fff;
+    margin-top: 20px;
+    padding-top: 150px;
+    line-height: 3.75rem;
+}
+.main-text h1 {
+    font-size: 6rem;
+    font-weight:600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.main-text span {
+    text-shadow: 0 0 100px #5865F2, 0 0 30px #4e5fd4;
+}
+.main-text p{
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #263042;
+}
+.number {
+    color: #fff;
+    display: flex;
+    padding: 100px;
+    font-size: 2rem;
+}
+.number h5 {
+    font-size: 2rem;
+}
+.fa {
+    padding-right: 10px;
+}
+.main-card {
+    background-color: #131621;
+    height: 30vh;
+}
+.semi-card2 {
+    background-color: #191a29;
+    transition: 0.5s ease;
+}
+.semi-card2:hover {
+    transform: scale(1.05);
+}
+.semi-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s ease;
+}
+
+.text {
+    color: #fff;
+    padding: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+}
+ #scrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    /* Initially invisible */
+    visibility: hidden;
+    /* Hides it from layout */
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    /* Smooth transition */
+    z-index: 1000;
+ }
+  #scrollButton.visible {
+    opacity: 1;
+    /* Fully visible */
+    visibility: visible;
+    /* Shows it in layout */
+  }
+.fa-arrow-right {
+    rotate: -90deg;
+}
+.faq {
+    background: #131621;
+    padding-top: 50px;
+}
+.faq-container {
+    max-width: 600px;
+    margin-left: 655px;
+    font-family: Arial, sans-serif;
+}
+.heading {
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #191a29;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: #fff;
+}
+
+.faq-question:hover {
+    background-color: #191a29;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #263042;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+.bg-footer {
+    background-color: #131621;
+    color: #fff;
+    padding: 50px;
+}
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-link {
+    text-decoration: none;
+    color: #ccc;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.4s ease;
+}
+.footer-link:hover {
+    color: #fff;
+    transform: translate(5px);
+}
+.footer-heading {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5rem;
+}
+.footer-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+}
